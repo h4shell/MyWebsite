@@ -1,1 +1,4 @@
 php.ini
+vendor
+composer.lock
+secret.php

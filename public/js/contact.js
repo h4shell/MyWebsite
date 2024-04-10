@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 
 const sendButton = form.querySelector(".btn");
-const url = "http://localhost:3000/contact.php";
+const url = "http://127.0.0.1:8080/contact.php";
 
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -19,8 +19,6 @@ sendButton.addEventListener("click", (event) => {
     },
   };
 
-  console.log(options);
-
   fetch(url, options)
     .then((response) => {
       if (!response.ok) {
@@ -29,7 +27,7 @@ sendButton.addEventListener("click", (event) => {
       return response.json(); // Parsa la risposta come JSON
     })
     .then((data) => {
-      if (data.status === true) {
+      if (data === 1) {
         sendButton.style.background = "green";
         sendButton.style.color = "white";
         sendButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
@@ -48,6 +46,7 @@ sendButton.addEventListener("click", (event) => {
       }
     })
     .catch((error) => {
+      console.log(error);
       sendButton.style.background = "red";
       sendButton.style.color = "white";
       sendButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
