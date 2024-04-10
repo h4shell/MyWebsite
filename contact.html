@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorenzo Fornara - Website</title>
+    <link rel="stylesheet" href="public/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container-logo">
+        <img src="public/images/LOGO.png" alt="" />
+      </div>
+      <div class="container-menu color">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="selected">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </nav>
+    <section id="header-contact">
+      <div class="container">
+        <h2 class="color align-center">GET IN <br />TOUCH</h2>
+        <p
+          class="uppercase align-center"
+          style="width: min(600px, 100%); margin-inline: auto"
+        >
+          Tramite il form che troverai qui sotto potrai lasciarmi un messaggio e
+          verrai ricontattato al più presto
+        </p>
+      </div>
+    </section>
+    <section id="contact-form" class="grid-2">
+      <div class="container-text">
+        <h2 class="color">JOIN<br />US</h2>
+        <p class="color">
+          creative wilderness,<br />
+          clients find our work truly <br />
+          beloved.
+        </p>
+      </div>
+      <form action="" style="display: flex; justify-content: start">
+        <form action="" method="post">
+          <label for="name"> Name </label>
+          <input type="text" name="name" id="name" placeholder="Berie Saders" />
+          <label for="email"> Email </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="BSaders@gmail.com"
+          />
+          <label for="message"> Message </label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Inserisci il testo qui...."
+          ></textarea>
+          <a type="submit" class="btn">INVIA</a>
+        </form>
+      </form>
+    </section>
+
+<footer>
+      <div class="container-wave" data-color="#fff"></div>
+      <div class="container grid-2">
+        <div class="container-text">
+          <img src="public/images/LOGO.png" alt="" />
+
+          <p>Website development</p>
+          <p>© 2024 <b>Lorenzo Fornara</b></p>
+        </div>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+
+
+    <script src="public/js/waves.js"></script>
+    <script src="public/js/navbar.js"></script>
+  </body>
+</html>

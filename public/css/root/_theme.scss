@@ -1,0 +1,280 @@
+:root {
+    --bg-website: #0e0d0d;
+    --color-title: linear-gradient(180deg, #89d8f0 0%, #c3f0c8 100%);
+}
+
+.color {
+    background-image: var(--color-title);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.header{
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .container{
+        transform: translateY(-8vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+
+    }
+
+    .container-button{
+        display: flex;
+        position: absolute;
+        bottom: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}
+
+.padding-block-8{
+   
+    padding-block: 8rem;
+
+}
+
+section{
+    padding-inline: 1rem;
+    width: min(1600px, 100% - 1rem);
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+
+
+.container-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+#body{
+
+    .container:nth-child(3){
+        .container-text{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            h2, p{
+                text-align: end;
+            }
+        }
+    }
+
+    
+
+    
+
+
+
+    
+}
+
+
+
+.container-text {
+    margin-block: auto;
+}
+
+#img-design {
+    margin-top: 1rem;
+    background: url(/public/images/design.png) no-repeat center/cover;
+    opacity: 1;
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 25px;
+    transform: rotate(1deg);
+    max-height: 500px;
+
+}
+
+
+
+#img-webapp {
+    margin-top: 1rem;
+    background: url(/public/images/webapp.png) no-repeat center/cover;
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 25px;
+    transform: rotate(-2deg);
+    order: 1;
+
+}
+
+#who{
+    
+    height: 100svh;
+    width: min(1800px, 100% - 1rem);
+    display: grid;
+    align-items: center;
+    color: white;
+    .container{
+        
+        align-items: start;
+        h2{
+            font-size: var(--step-8);
+            line-height: calc(var(--step-8) * .9);
+        }
+
+        p{
+            width: 50%;
+        }
+
+        .grid-2{
+            gap: 2rem;
+            margin-top: 2rem;
+            p{
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+#me{
+    margin-top: 5rem;
+    color: white;
+
+    img{
+        margin-inline: auto;
+        margin-block: auto;
+        width: 100%;
+    }
+
+    gap: 4rem;
+
+    .container-text{
+        margin-block: auto;
+        text-align: end;
+
+        .text{
+            margin-top: 3rem;
+        }
+    }
+
+    
+    
+}
+
+
+#header-contact{
+    padding-top: 12rem;
+    color: white;
+
+    p{
+        margin-top: 2rem;
+    }
+}
+
+
+#contact-form{
+    margin-top: 8rem;
+    text-align: end;
+
+    .container-text{
+        border-right: 10px solid rgb(174, 218, 226);
+        padding-right: 2rem;
+    }
+}
+
+#header-404{
+
+    color: white;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+
+}
+
+
+
+
+.margin-top-1{
+    margin-top: 1rem
+}
+
+.container-wave{
+    margin-top: 10rem;
+    overflow: hidden;
+}
+
+
+
+@media (min-width: 66em){
+    #body {
+        #img-design,
+            #img-webapp {
+                width: 500px;
+                margin-inline: auto;
+                aspect-ratio: 1/1;
+            }
+    }
+
+    
+}
+
+@media (min-width: 33em) {
+    #img-webapp{
+        order: initial!important;
+    }
+
+
+}
+
+
+
+
+.animated{
+    
+    animation: colored 20s infinite reverse linear;
+
+}
+
+
+
+
+@keyframes colored{
+    0%{
+        color: rgb(144, 230, 230)
+    }
+
+    20%{
+        color: rgb(145, 151, 233)
+    }
+
+    40%{
+        color: rgb(99, 192, 99);
+    }
+
+    60%{
+        color: rgb(231, 231, 103);
+    }
+
+    80%{
+        color: rgb(235, 136, 136)
+    }
+
+    100%{
+        color: rgb(144, 230, 230)
+    }
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

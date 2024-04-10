@@ -1,0 +1,53 @@
+footer {
+
+    p{
+        font-size: var(--step--1);
+    }
+
+    
+    .grid-2{
+        padding: 1rem 2rem;
+        background: white;
+        display: grid;
+        justify-content: center;
+
+        .container-text {
+
+            display: grid;
+
+            img{
+                justify-self: center;
+                margin-block: .8rem;
+            }
+
+        }
+
+    }
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: var(--step--1);
+
+        
+
+    }
+}
+
+@media(min-width: 33em){
+    footer{
+        .grid-2 {
+                .container-text {
+                    img {
+                        justify-self: start;
+                    }
+                }
+
+                a{
+                    text-align: end;
+                    align-self: self-end;
+                }
+            }
+    }
+}

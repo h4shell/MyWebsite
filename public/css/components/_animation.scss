@@ -1,0 +1,69 @@
+
+
+.animated-scale{
+    opacity: 0;
+    animation: anim-scale linear forwards;
+    animation-timeline: view(300px);
+    animation-range: 0 150px;
+    transform: scale(.9);
+    
+    
+    
+    
+    @keyframes anim-scale {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.animated-fade-left{
+
+    transform: translateX(100%);
+    animation: animated-fade-left linear forwards;
+    animation-timeline: view(200px);
+    animation-range: 0px 450px;
+    
+
+    @keyframes animated-fade-left {
+            to {
+                transform: translateX(0);
+            }
+    }
+
+}
+
+.animated-fade-right {
+
+    transform: translateX(-100%);
+    animation: animated-fade-right linear forwards;
+    animation-timeline: view(200px);
+    animation-range: 0px 450px;
+
+
+    @keyframes animated-fade-right {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+}
+
+
+.animated-fade-bottom {
+    z-index: -100;
+
+    transform: translateY(150%);
+    animation: animated-fade-bottom linear forwards;
+    animation-timeline: view(200px);
+    animation-range: 0px 450px;
+
+
+    @keyframes animated-fade-bottom {
+        to {
+            transform: translateY(0);
+        }
+    }
+
+}

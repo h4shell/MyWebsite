@@ -1,0 +1,20 @@
+.btn{
+    font-size: var(--step--1);
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: white;
+    border: .8px solid white;
+    padding: .6rem 2rem;
+    border-radius: 25px;
+    max-width: fit-content;
+    transition: background .6s,
+                color .6s,
+                transform .6s;
+}
+
+.btn:hover{
+    background: white;
+    color: black;
+    transform: translateY(-6px);
+}

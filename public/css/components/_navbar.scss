@@ -1,0 +1,121 @@
+nav{
+    background: var(--bg-website);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-block: 1.2rem;
+    z-index: 9999;
+
+    .container-logo{
+        margin-left: 1rem;
+    }
+
+
+    
+
+  
+
+
+    
+    .container-menu{
+        position: absolute;
+        left: 0;
+        
+        right: 0;
+        top: 0;
+        width: 0;
+        overflow: hidden;
+        height: 100vh;
+        z-index: 2;
+        background: black;
+        display: flex;
+        margin-block: auto;
+        
+
+        ul{
+            display: flex;
+            gap: 1.8rem;
+            flex-direction: column;
+            list-style: none;
+            padding: 4rem 2rem;
+
+            li{
+                
+                color: white;
+                
+                font-size: var(--step-2);
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .selected{
+                    font-weight: bold;
+                    background-image: var(--color-title);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                }
+                
+                
+            }
+
+        }
+        transition: width .2s;
+    }
+
+    .hamburger{
+        
+        z-index: 9000;
+        padding-right: 1.2rem;
+        a {
+            display: grid;
+            gap: .5rem;
+
+            span {
+                    display: block;
+                    height: 2px;
+                    background: white;
+                    width: 2rem;
+            }
+
+        }
+        
+    }
+
+    .active {
+
+        width: 80%;
+        
+    }
+
+}
+
+
+
+@media (min-width: 66em){
+    nav{
+        .container-menu{
+            display: block;
+            width: auto;
+            height: auto;
+            position: relative;
+            background: none;
+            
+            ul{
+                flex-direction: row;
+                padding: 0 2rem;
+
+                li{
+                    font-size: var(--step--1)
+                }
+
+            }
+        }
+
+        .hamburger{
+            display: none;
+        }
+    }
+}

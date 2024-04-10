@@ -1,0 +1,31 @@
+#video-header{
+    
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(-33vh);
+    animation: expand-in linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 450px;
+
+    video{
+        border-radius: 25px;
+    }
+
+    @keyframes expand-in {
+        to {
+            transform: translateY(40px);
+            border-radius: 0;
+            width: min(1200px, 100% - 1rem);
+            height: 400px;
+
+        }
+    }
+}
+
+
+
