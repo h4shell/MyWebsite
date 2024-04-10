@@ -371,6 +371,10 @@ section {
     transform: translate3d(85px, 0, 0);
   }
 }
+.d-none {
+  visibility: hidden !important;
+}
+
 nav {
   background: var(--bg-website);
   position: fixed;
@@ -379,6 +383,15 @@ nav {
   width: 100%;
   padding-block: 1.2rem;
   z-index: 9999;
+}
+nav span {
+  transition: transform 0.6s ease-in-out;
+}
+nav .rotate1 {
+  transform: rotateZ(-45deg) translate(-15px);
+}
+nav .rotate2 {
+  transform: rotateZ(45deg) translate(-15px);
 }
 nav .container-logo {
   margin-left: 1rem;
@@ -522,9 +535,14 @@ form label {
   font-size: var(--step--1);
 }
 form input {
+  border: none;
   margin-bottom: 1rem;
 }
+form input* {
+  background: transparent;
+}
 form input, form textarea {
+  outline: none;
   width: 100%;
   border: none;
   background: transparent;

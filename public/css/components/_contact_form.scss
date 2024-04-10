@@ -18,14 +18,18 @@ form{
     }
 
     input{
-       
+        border: none;
         margin-bottom: 1rem;
-        
+    }
+
+    input*{
+        background: transparent;
         
         
     }
 
     input, textarea{
+        outline: none;
         width: 100%;
         border: none;
         background: transparent;

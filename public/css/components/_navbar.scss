@@ -1,3 +1,7 @@
+.d-none{
+    visibility: hidden!important;
+}
+
 nav{
     background: var(--bg-website);
     position: fixed;
@@ -7,6 +11,17 @@ nav{
     padding-block: 1.2rem;
     z-index: 9999;
 
+    span{
+        transition: transform .6s ease-in-out;
+    }
+    .rotate1{
+        transform: rotateZ(-45deg) translate(-15px);
+    }
+
+    .rotate2 {
+        transform: rotateZ(45deg) translate(-15px);
+    }
+        
     .container-logo{
         margin-left: 1rem;
     }
