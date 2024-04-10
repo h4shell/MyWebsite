@@ -598,7 +598,7 @@ form .btn {
   }
 }
 #privacy {
-  padding: 8rem;
+  padding-block: 8rem;
 }
 #privacy h2 {
   font-size: var(--step-3);
