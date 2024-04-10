@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 
 const sendButton = form.querySelector(".btn");
-const url = "http://127.0.0.1:8080/contact.php";
+const url = "https://h4sh.it/contact.php";
 
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();

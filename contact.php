@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 require './vendor/autoload.php';
 // Verifica che l'origine della richiesta corrisponda a localhost sulla porta 5500
-$allowed_origin = 'http://127.0.0.1:5500';
+$allowed_origin = 'https://h4shell.github.io/';
 
 
 if (isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] == $allowed_origin) {
