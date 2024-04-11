@@ -693,7 +693,9 @@ footer .grid-2 {
   justify-content: center;
 }
 footer .grid-2 .container-text {
+  width: 100svw;
   display: grid;
+  text-align: center;
 }
 footer .grid-2 .container-text img {
   justify-self: center;
@@ -706,8 +708,14 @@ footer a {
   font-family: "Montserrat", sans-serif;
   font-size: var(--step--1);
 }
+footer .grid-2 .container-text {
+  width: 100%;
+}
 
 @media (min-width: 33em) {
+  footer .grid-2 .container-text {
+    text-align: start;
+  }
   footer .grid-2 .container-text img {
     justify-self: start;
   }

@@ -4,6 +4,8 @@ footer {
         font-size: var(--step--1);
     }
 
+
+
     
     .grid-2{
         padding: 1rem 2rem;
@@ -12,8 +14,9 @@ footer {
         justify-content: center;
 
         .container-text {
-
+            width: 100svw;
             display: grid;
+            text-align: center;
 
             img{
                 justify-self: center;
@@ -33,12 +36,23 @@ footer {
         
 
     }
+
+
+    .grid-2{
+        .container-text{
+            width: 100%;
+        }
+
+
+
+    }
 }
 
 @media(min-width: 33em){
     footer{
         .grid-2 {
                 .container-text {
+                    text-align: start;
                     img {
                         justify-self: start;
                     }
