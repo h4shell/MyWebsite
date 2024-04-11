@@ -1,3 +1,35 @@
+::-webkit-scrollbar {
+    width: 8px;
+    
+    /* Larghezza della barra di scorrimento */
+}
+
+::-webkit-scrollbar-track {
+    background: #0000001c;
+    /* Colore di sfondo della traccia della barra di scorrimento */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #547581;
+    border-radius: 25px;
+    /* Colore del thumb (il "manico" della barra di scorrimento) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1ea6db;
+    /* Cambia il colore del thumb al passaggio del mouse */
+}
+
+a:active {
+    background: transparent;
+    /* Rimuove il contorno attivo quando il bottone è cliccato */
+}
+
+::selection {
+    background: rgba(111, 158, 230, 0.123);
+    
+}
+
 :root {
     --bg-website: #0e0d0d;
     --color-title: linear-gradient(180deg, #89d8f0 0%, #c3f0c8 100%);
