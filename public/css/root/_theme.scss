@@ -189,17 +189,26 @@ section{
     }
 }
 
-#header-404{
-
-    color: white;
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+#body-404{
+    display: grid;
     
+    #header-404 {
+    
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 8rem;
+        }
 
+
+        footer{
+            align-self: end;
+        }
+
+    
 }
 
 
