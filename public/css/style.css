@@ -659,10 +659,24 @@ form .btn {
 }
 #privacy {
   padding-block: 8rem;
+  display: grid;
+  gap: 2rem;
+  position: relative;
+  border-left: 1rem solid white;
+  padding-left: 2rem;
+}
+#privacy h1 {
+  text-align: start;
+  margin-bottom: 4rem;
+  font-size: var(--step-9);
+  line-height: calc(var(--step-9) * 0.9);
 }
 #privacy h2 {
   font-size: var(--step-3);
   color: white;
+  line-height: calc(var(--step-3) * 0.9);
+  margin-bottom: 0.6rem;
+  text-align: start;
 }
 #privacy p {
   font-size: var(--step-1);

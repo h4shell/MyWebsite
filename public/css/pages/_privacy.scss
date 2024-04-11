@@ -1,9 +1,25 @@
 #privacy {
     padding-block: 8rem;
+    display: grid;;
+    gap: 2rem;
+    position: relative;
+    border-left: 1rem solid white;
+    padding-left: 2rem;
+
+    h1{
+        text-align: start;
+        margin-bottom: 4rem;
+        font-size: var(--step-9);
+        line-height: calc(var(--step-9) * .9);
+    }
+
 
     h2{
         font-size: var(--step-3);
-        color: white
+        color: white;
+        line-height: calc(var(--step-3) * .9);
+        margin-bottom: .6rem;
+        text-align: start;
     }
 
     p {
@@ -11,3 +27,5 @@
         color: white;
     }
 }
+
+
