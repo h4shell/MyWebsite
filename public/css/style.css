@@ -232,6 +232,7 @@ section {
   margin-inline: auto;
   margin-block: auto;
   width: 100%;
+  border-radius: 25px;
 }
 #me .container-text {
   margin-block: auto;
