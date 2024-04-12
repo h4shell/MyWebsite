@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 
 const sendButton = form.querySelector(".btn");
-const url = "/contact.php";
+let url = "/contact.php";
 
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
