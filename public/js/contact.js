@@ -27,6 +27,7 @@ sendButton.addEventListener("click", (event) => {
       return response.json(); // Parsa la risposta come JSON
     })
     .then((data) => {
+      console.log(data);
       if (data === 1) {
         sendButton.style.background = "green";
         sendButton.style.color = "white";
