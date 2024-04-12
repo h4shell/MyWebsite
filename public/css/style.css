@@ -511,6 +511,10 @@ nav .active {
     display: none;
   }
 }
+body {
+  overflow-x: hidden;
+}
+
 .animated-scale {
   opacity: 0;
   animation: anim-scale linear forwards;
