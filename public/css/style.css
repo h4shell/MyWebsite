@@ -254,6 +254,9 @@ section {
   margin-top: 8rem;
   text-align: end;
 }
+#contact-form svg {
+  fill: white;
+}
 #contact-form .container-text {
   border-right: 10px solid rgb(174, 218, 226);
   padding-right: 2rem;
@@ -282,6 +285,13 @@ section {
 .container-wave {
   margin-top: 10rem;
   overflow: hidden;
+}
+
+.container-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  margin-top: 1.8rem;
 }
 
 @media (min-width: 66em) {
@@ -696,6 +706,16 @@ footer .grid-2 {
   background: white;
   display: grid;
   justify-content: center;
+  gap: 0;
+}
+footer .grid-2 .container {
+  display: grid;
+  justify-content: end;
+  gap: 0.5rem;
+}
+footer .grid-2 .container a {
+  text-align: center;
+  margin-top: 0.3rem;
 }
 footer .grid-2 .container-text {
   width: 100svw;

@@ -12,6 +12,18 @@ footer {
         background: white;
         display: grid;
         justify-content: center;
+        gap: 0;
+
+        .container {
+            display: grid;
+            justify-content: end;
+            gap: .5rem;
+
+            a{
+                text-align: center;
+                margin-top: .3rem;
+            }
+        }
 
         .container-text {
             width: 100svw;
@@ -46,6 +58,8 @@ footer {
 
 
     }
+
+        
 }
 
 @media(min-width: 33em){

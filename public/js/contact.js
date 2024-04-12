@@ -1,7 +1,13 @@
 const form = document.querySelector("form");
 
 const sendButton = form.querySelector(".btn");
-let url = "/contact.php";
+let url = "";
+
+if (window.location.host === "h4shell.github.io") {
+  url = "https://h4sh.it/contact.php";
+} else {
+  url = "/contact.php";
+}
 
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();

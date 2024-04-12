@@ -202,7 +202,12 @@ section{
 }
 
 
+
 #header-contact{
+
+
+    
+
     padding-top: 12rem;
     color: white;
 
@@ -213,6 +218,11 @@ section{
 
 
 #contact-form{
+
+    svg {
+            fill: white;
+        }
+
     margin-top: 8rem;
     text-align: end;
 
@@ -255,6 +265,15 @@ section{
     margin-top: 10rem;
     overflow: hidden;
 }
+
+.container-social{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    margin-top: 1.8rem
+}
+
+
 
 
 
