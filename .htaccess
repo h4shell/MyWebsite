@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^sitemap\.xml$ ./sitemap.xml [L]
+RewriteRule ^sitemap\.xml$ https://h4shell.github.io/MyWebsite/robots.txt [L]
