@@ -9,6 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lorenzo Fornara - Portfolio</title>
     <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <meta
       name="description"
       content="Esplora il portfolio di Lorenzo Fornara, dove troverai una raccolta dei miei migliori progetti web. Dai un'occhiata alle mie creazioni e scopri cosa posso fare per te."
@@ -53,36 +57,36 @@
       </div>
     </section>
     <section id="container-portfolio" class="animated-fade-bottom">
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/Portfolio-Template-Web/Template5/index.html"
-        data-image="website1.png"
-      ></div>
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/Portfolio-Template-Web/Template10/index.html"
-        data-image="website2.png"
-      ></div>
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/Portfolio-Template-Web/Template6/index.html"
-        data-image="website3.png"
-      ></div>
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/Portfolio-Template-Web/Template1/index.html"
-        data-image="website4.png"
-      ></div>
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/Portfolio-Template-Web/Template2/index.html"
-        data-image="website5.png"
-      ></div>
-      <div
-        class="item"
-        data-url="https://h4shell.github.io/bmoon/"
-        data-image="website6.png"
-      ></div>
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="item swiper-slide" data-url="https://h4shell.github.io/Portfolio-Template-Web/Template10/index.html" data-image="website2.png" style="background: url(&quot;public/images/website2.png&quot;) center center / cover no-repeat;"><div class="container-button"><a class="btn" href="https://h4shell.github.io/Portfolio-Template-Web/Template10/index.html">View Project</a></div></div>
+          <div class="item swiper-slide" data-url="https://h4shell.github.io/Portfolio-Template-Web/Template6/index.html" data-image="website3.png" style="background: url(&quot;public/images/website3.png&quot;) center center / cover no-repeat;"><div class="container-button"><a class="btn" href="https://h4shell.github.io/Portfolio-Template-Web/Template6/index.html">View Project</a></div></div>
+          <div
+            class="item swiper-slide"
+            data-url="https://h4shell.github.io/Portfolio-Template-Web/Template5/index.html"
+            data-image="website1.png"
+          ></div>
+          <div
+            class="item swiper-slide"
+            data-url="https://h4shell.github.io/Portheight: 300px;
+            class="item swiper-slide"
+            data-url="https://h4shell.github.io/Portfolio-Template-Web/Template1/index.html"
+            data-image="website4.png"
+          ></div>
+          <div
+            class="item swiper-slide"
+            data-url="https://h4shell.github.io/Portfolio-Template-Web/Template2/index.html"
+            data-image="website5.png"
+          ></div>
+          <div
+            class="item swiper-slide"
+            data-url="https://h4shell.github.io/bmoon/"
+            data-image="website6.png"
+          ></div>
+          
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -158,6 +162,9 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="public/js/slider-cards.js"></script>
     <script src="public/js/portfolio.js"></script>
     <script src="public/js/waves.js"></script>
     <script src="public/js/navbar.js"></script>

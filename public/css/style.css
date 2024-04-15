@@ -336,6 +336,10 @@ section {
   }
 }
 
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
 .btn {
   background: transparent;
   font-size: var(--step--1);
@@ -651,7 +655,6 @@ form .btn {
   justify-content: center;
 }
 #container-portfolio .item {
-  flex-basis: 400px;
   height: 300px;
   border-radius: 25px;
   overflow: hidden;
