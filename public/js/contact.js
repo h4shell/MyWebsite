@@ -9,6 +9,11 @@ if (window.location.host === "h4shell.github.io") {
   url = "/contact.php";
 }
 
+function isEmailValid(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
   const formBody = {
@@ -24,6 +29,16 @@ sendButton.addEventListener("click", (event) => {
       "Content-Type": "application/json",
     },
   };
+
+  if (
+    !isEmailValid(formBody.email) ||
+    formBody.name === "" ||
+    formBody.email === "" ||
+    formBody.message === ""
+  ) {
+    alert("Controlla i campi inseriti");
+    return;
+  }
 
   fetch(url, options)
     .then((response) => {
