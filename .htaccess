@@ -1,2 +1,6 @@
-RewriteEngine On
-RewriteRule ^sitemap\.xml$ https://h4shell.github.io/MyWebsite/robots.txt [L]
+<Files "robots.txt">
+Header set Content-Type text/plain
+</Files>
+
+RewriteEngine on
+RewriteRule ^robots\.txt$ /MyWebsite/robots.txt [L]
