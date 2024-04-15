@@ -28,13 +28,17 @@
 
 h1 {
     font-size: var(--step-7);
-    font-family: "bangers", system-ui;
+    font-family: "Audiowide", system-ui;
     letter-spacing: calc(var(--step-7) * .1);
     width: 100%;
     line-height: calc(var(--step-7) * .9);
 }
 
-h2{
+#homepage-h1{
+    font-family: "bangers", system-ui;
+}
+
+h2, h1{
     font-size: var(--step-8);
     font-family: "Audiowide", system-ui;
     letter-spacing: .2rem;
