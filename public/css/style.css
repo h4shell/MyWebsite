@@ -340,6 +340,11 @@ section {
   background-color: white !important;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #89d8f0 !important;
+}
+
 .btn {
   background: transparent;
   font-size: var(--step--1);
