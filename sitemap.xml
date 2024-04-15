@@ -24,4 +24,7 @@
       <changefreq>never</changefreq>
       <priority>1</priority>
    </url>
+   <url>
+        <loc>https://h4shell.github.io/MyWebsite/robots.txt</loc>
+    </url>
 </urlset>

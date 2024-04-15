@@ -1,6 +1,8 @@
-<Files "robots.txt">
-Header set Content-Type text/plain
-</Files>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteEngine on
-RewriteRule ^robots\.txt$ /MyWebsite/robots.txt [L]
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
