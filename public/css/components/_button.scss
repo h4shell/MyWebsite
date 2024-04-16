@@ -10,12 +10,11 @@
     border-radius: 25px;
     max-width: fit-content;
     transition: background .6s,
-                color .6s,
-                transform .6s;
+                color .6s;
 }
 
 .btn:hover{
     background: white;
     color: black;
-    transform: translateY(-6px);
+    
 }
