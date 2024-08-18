@@ -1,78 +1,51 @@
-const form = document.querySelector("form");
+const myEmail = "aDRzaGVsbEBnbWFpbC5jb20=";
+const emailSubject = "Get In Touch - FROM Mywebsite";
+const specialForm = document.querySelector("#special-form");
+const textarea = specialForm.querySelector("textarea");
+const checkbox = specialForm.querySelector("#check");
+const btnSend = specialForm.querySelector("#send");
+const inputName = specialForm.querySelector("#name");
+const inputMessage = specialForm.querySelector("#message");
+const inputs = specialForm.querySelectorAll("input:not([type=checkbox])");
 
-const sendButton = form.querySelector(".btn");
-let url = "";
-
-if (window.location.host === "h4shell.github.io") {
-  url = "https://h4sh.it/contact.php";
-} else {
-  url = "/contact.php";
-}
-
-function isEmailValid(email) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailPattern.test(email);
-}
-
-sendButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  const formBody = {
-    name: form.querySelector('input[name="name"]').value,
-    email: form.querySelector('input[name="email"]').value,
-    message: form.querySelector('textarea[name="message"]').value,
-  };
-
-  const options = {
-    method: "POST",
-    body: JSON.stringify(formBody),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-
-  if (
-    !isEmailValid(formBody.email) ||
-    formBody.name === "" ||
-    formBody.email === "" ||
-    formBody.message === ""
-  ) {
-    alert("Controlla i campi inseriti");
-    return;
+checkbox.addEventListener("click", () => {
+    
+  if (!checkbox.checked) {
+    btnSend.classList.add("disabled");
+    inputName.disabled = false;
+    inputMessage.disabled = false;
+    btnSend.removeAttribute('href');
+    inputName.style.opacity = 1;
+    inputMessage.style.opacity = 1;
+  } else {
+    if (inputName.value.length != 0 && inputMessage.value.length != 0) {
+      btnSend.classList.remove("disabled");
+      inputName.disabled = true;
+      inputMessage.disabled = true;
+      inputName.style.opacity = 0.3;
+      inputMessage.style.opacity = 0.3;
+      btnSend.href = `mailto:${atob(
+        myEmail
+      )}?subject=${emailSubject}%20-%20Name:%20${inputName.value}&body=${
+        inputMessage.value
+      }`;
+    } else {
+      checkbox.checked = false;
+      
+    }
   }
+});
 
-  fetch(url, options)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Errore nella richiesta POST");
-      }
-      return response.json(); // Parsa la risposta come JSON
-    })
-    .then((data) => {
-      console.log(data);
-      if (data === 1) {
-        sendButton.style.background = "green";
-        sendButton.style.color = "white";
-        sendButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
-</svg>`;
-
-        form.querySelectorAll("input, textarea").forEach((input) => {
-          input.value = "";
-        });
+document.addEventListener("keyup", () => {
+  inputs.forEach((input) => {
+    if (input.value.length != 0) {
+      if (textarea.value.length != 0) {
+        checkbox.disabled = false;
       } else {
-        sendButton.style.background = "red";
-        sendButton.style.color = "white";
-        sendButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-</svg>`;
+        checkbox.disabled = true;
       }
-    })
-    .catch((error) => {
-      console.log(error);
-      sendButton.style.background = "red";
-      sendButton.style.color = "white";
-      sendButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-</svg>`;
-    });
+    } else {
+      checkbox.disabled = true;
+    }
+  });
 });

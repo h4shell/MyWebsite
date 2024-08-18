@@ -1,4 +1,4 @@
-form{
+#special-form{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -8,13 +8,41 @@ form{
     
     width: min(360px, 100%);
     margin-inline: auto;
+
+    .special-form-container{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        width: 100%;
+
+        textarea{
+            min-height: 10rem;
+        }
+
+    }
     
+    .container-check{
+        margin-block: 1rem,;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+        p{
+            font-size: 1rem;
+        }
+
+        input{
+            margin-block: auto;
+        }
+    }
     
 
     label{
         font-weight: bold;
         text-transform: uppercase;
         font-size: var(--step--1);
+    
     }
 
     input{
@@ -22,7 +50,7 @@ form{
         margin-bottom: 1rem;
     }
 
-    input*{
+    input *{
         background: transparent;
         
         
@@ -43,18 +71,30 @@ form{
     }
 
    
-    .btn{
-        
+    #send{
         margin-top: 1rem;
         bottom: 0;
-        align-self: flex-end;
+        align-self: flex-start;
+
     }
+
+    .disabled{
+        opacity: 0.2;
+    }
+
+    .disabled:hover{
+        background: none;
+        color: white;
+        cursor:not-allowed;
+    }
+
+    
 
 
 }
 
 @media(min-width: 33em){
-    form{
+    #special-form{
         margin-inline: initial;
     }
 }
