@@ -82,6 +82,10 @@ p {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   /* Larghezza della barra di scorrimento */
@@ -152,7 +156,8 @@ a:active {
 }
 
 .padding-block-8 {
-  padding-block: 8rem;
+  padding-block: 6rem;
+  padding-top: 14rem;
 }
 
 section {
@@ -230,6 +235,7 @@ section {
 #me {
   margin-top: 5rem;
   color: white;
+  padding: 0;
   gap: 4rem;
 }
 #me img {
@@ -282,6 +288,15 @@ section {
   align-self: end;
 }
 
+#call-to-action {
+  margin-top: 12rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .margin-top-1 {
   margin-top: 1rem;
 }
@@ -296,6 +311,14 @@ section {
   gap: 1rem;
   justify-content: end;
   margin-top: 1.8rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 @media (min-width: 66em) {
@@ -661,6 +684,98 @@ body {
 @media (min-width: 33em) {
   #special-form {
     margin-inline: initial;
+  }
+}
+#me {
+  overflow: visible;
+}
+#me .__container-commerce {
+  padding-top: 9rem;
+  justify-content: center;
+  margin-top: 4rem;
+  overflow: visible;
+}
+#me .__container-commerce .big {
+  transform: scale(1.05);
+  z-index: 100;
+  background: rgb(24, 24, 24) !important;
+}
+#me .__container-commerce .ecard {
+  padding-inline: 2vw !important;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  text-align: center;
+  max-width: 460px;
+  min-width: 360px;
+}
+#me .__container-commerce .ecard h3 {
+  font-size: 46px;
+  margin-bottom: 1rem;
+  font-family: "Audiowide", system-ui;
+  color: #B3DEDB;
+  font-weight: normal;
+}
+#me .__container-commerce .ecard .ecard-head {
+  font-family: "Audiowide", system-ui;
+  color: #B3DEDB;
+  font-size: 23px;
+  margin-bottom: 1.5rem;
+}
+#me .__container-commerce .ecard span {
+  display: block;
+  height: 1px;
+  width: 50%;
+  background: rgb(82, 82, 82);
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  margin-top: 2.5rem;
+}
+#me .__container-commerce .ecard .text-end {
+  margin-right: 2rem;
+}
+#me .__container-commerce .ecard .bigger {
+  font-size: var(--step-4);
+  font-family: "OpenSans", system-ui;
+  font-weight: bold;
+}
+#me .__container-commerce .ecard .dotted::before {
+  content: "* ";
+}
+#me .__container-commerce .ecard .dotted {
+  margin-block: 1rem;
+  margin-top: 0.5rem;
+}
+#me .__container-commerce .ecard .end {
+  margin-block: 1.5rem;
+}
+#me .__container-commerce .ecard .price {
+  margin-block: 1rem;
+}
+#me .__container-commerce .ecard .smaller {
+  font-size: var(--step--1);
+}
+#me .__container-commerce .ecard .container-button {
+  display: flex;
+  margin-block: 3rem;
+  margin-bottom: 1.5rem;
+  width: min(300px, 100%);
+  margin-inline: auto;
+}
+#me .__container-commerce .ecard .container-button .btn {
+  min-width: 100%;
+}
+
+@media (max-width: 1460px) {
+  .__container-commerce {
+    padding-top: 4rem !important;
+    gap: 1rem;
+  }
+  .__container-commerce .big {
+    transform: scale(1) !important;
+    z-index: 100;
+    /* From https://css.glass */
   }
 }
 #portfolio-header {

@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: smooth;
+  }
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -74,9 +76,10 @@ a:active {
 
 .padding-block-8{
    
-    padding-block: 8rem;
-
+    padding-block: 6rem;
+    padding-top: 14rem;
 }
+
 
 section{
     padding-inline: 1rem;
@@ -180,6 +183,7 @@ section{
 #me{
     margin-top: 5rem;
     color: white;
+    padding: 0;
 
     img{
         margin-inline: auto;
@@ -256,8 +260,14 @@ section{
     
 }
 
+#call-to-action{
+    margin-top: 12rem
+}
 
-
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .margin-top-1{
     margin-top: 1rem
@@ -275,9 +285,13 @@ section{
     margin-top: 1.8rem
 }
 
+.text-center{
+    text-align: center;
+}
 
-
-
+.text-end{
+    text-align: end;
+}
 
 @media (min-width: 66em){
     #body {
